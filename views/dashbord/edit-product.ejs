@@ -1,0 +1,100 @@
+
+
+    <style>
+       
+        .form {
+        width: 100%;
+          margin-top: 10px;
+          background: white;
+          color : black ;
+          
+          padding: 30px;
+          border-radius: 15px;
+          /* box-shadow: 0 0 15px rgba(0,0,0,0.1); */
+        }
+        .form-title {
+          text-align: center;
+          margin-bottom: 25px;
+          font-weight: bold;
+          color: #0d6efd;
+        }
+          
+  </style>
+    
+
+
+  <div class="header"><%- include('./header.ejs') %></div>
+<div class="container-fluid border w-100 ">
+    <div class="row">
+<div class="col-3 mt-2">
+ 
+  <%- include('./sidebar.ejs') %>
+  
+</div>
+
+<div class="col-9">
+        <div class="form">
+          <h2 class="form-title">Add Tour & Travel Package</h2>
+          <form   method="post" enctype="multipart/form-data"  id="addpackageform">
+            
+            <div class="mb-3">
+              <label for="productname" class="form-label">Package Name</label>
+              <input type="text" class="form-control" id="productname" name="productname"  value="<%= packdata.productname %>">
+            </div>
+    
+            <div class="mb-3">
+              <label for="packagedetails" class="form-label">Package Details</label>
+              <textarea class="form-control" id="packagedetails"    name="packagedetails" rows="4" ><%= packdata.packagedetails %></textarea>
+              
+            </div>
+    
+            <div class="mb-3">
+  <label for="category" class="form-label">Package Category</label>
+  <select class="form-select" id="category" name="category">
+    <option value="" disabled selected>Select a category</option>
+    <option value="religious">Religious</option>
+    <option value="adventure">Adventure</option>
+    <option value="honeymoon">Honeymoon</option>
+    <option value="family">Family</option>
+    <option value="wildlife">Wildlife</option>
+    <option value="historical">Historical</option>
+  </select>
+</div>
+
+
+
+    <!-- new -->
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Price (INR)</label>
+              <input type="number" class="form-control" id="price" name="price" value="<%= packdata.price %>" required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="duration" class="form-label">Duration</label>
+              <input type="text" class="form-control" id="duration" name="duration" value="<%= packdata.duration %>" placeholder=" 5 Days / 4 Nights" required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="uploadimage" class="form-label">Upload  Image</label>
+               <input type="file" class="form-control" id="uploadimage"  name="uploadimage" multiple>
+               <% if (packdata.uploadimage) { %>
+
+              <img src="/<%= packdata.uploadimage %>" alt="Image" style="max-width: 200px; max-height: 100px; ">
+
+                <% } %> 
+
+            </div>
+    
+            <div class="mb-3">
+              <label for="location" class="form-label">Destination</label>
+              <input type="text" class="form-control" id="location" name="location" value="<%= packdata.location %>">
+            </div>
+    
+            <button type="submit" class="btn btn-primary w-100">Submit Package</button>
+          </form>
+        </div>
+       
+
+
+ 

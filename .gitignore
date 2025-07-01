@@ -1,0 +1,8 @@
+# Ignore folders
+node_modules/
+upload/
+image/
+
+# Ignore files
+controller/router.js
+db/database.js

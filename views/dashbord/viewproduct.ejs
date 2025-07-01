@@ -1,0 +1,74 @@
+
+  <%- include('./header.ejs') %>
+
+<!-- Page Layout -->
+
+  <div class="d-flex">
+    <!-- Sidebar (optional if you use it) -->
+    <div class="col-3 text-dark p-3">
+      <%- include('./sidebar.ejs') %>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-9 p-3" style="overflow-y: scroll; height: 800px;">
+      <div class="container-fluid mt-3 bg-light">
+        <h2>VIEW ADD PRODUCT</h2>
+
+        <% if (packdata.length > 0) { %>
+          <table class="table-bordered table" id="table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Package Details</th>
+                <th>category</th>
+                <th>Price</th>
+                <th>Duration</th>
+                <th>Image</th>
+                <th>Location</th>
+                <th>Edit</th>      
+                <th>Delete</th>   
+            </tr>
+            </thead>
+            <tbody>
+
+   <% for (var i = 0; i < packdata.length; i++) { %>
+                <tr>
+                  <td><%= packdata[i].productname %></td>
+                  <td><%= packdata[i].packagedetails %></td>
+                  <td><%= packdata[i].category %></td>
+                  <td><%= packdata[i].price %></td>
+                  <td><%= packdata[i].duration %></td>
+                   
+  <!-- <td><img src="/<%= packdata[i].uploadimage[0] %>" width="80" /></td> -->
+
+ <td>
+  <% for (let j = 0; j < packdata[i].uploadimage.length; j++) { %>
+    <img src="/<%= packdata[i].uploadimage[j] %>" width="100" style="margin-right: 5px;" />
+  <% } %>
+ </td>
+                  <td><%= packdata[i].location %></td>
+                  <td><a href="/edit_2/<%= packdata[i]._id %>">Edit</a></td>
+                  <td><a href="/delete/<%= packdata[i]._id %>">Delete</a></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <p>No record found</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Initialize DataTable -->
+<script>
+  $(document).ready(function () {
+    $('#table').DataTable();
+  });
+</script>

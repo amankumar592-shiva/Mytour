@@ -1,0 +1,68 @@
+
+    <style>
+             body {
+                font-family:  Tahoma,  sans-serif;
+                background-color: #f8f9fa;
+                font-weight: bold;
+            } 
+            .parent-container {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+            .child-container {
+                width: 100%;
+                max-width: 800px;
+                background: white;
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 0 20px rgba(238, 11, 11, 0.4);
+            }
+            .form-title {
+                font-weight: bold;
+                color: #2c3e50;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+     
+    <%- include('./header.ejs') %>
+    <div class="parent-container">
+        <div class="child-container">
+
+
+            <form method="post" class="row g-3">
+    <h2 class="form-title text-center">Contact Us</h2>
+
+    <div class="col-md-6">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="<%= contactData.name %>" required>
+    </div>
+
+    <div class="col-md-6">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" name="email"  value="<%= contactData.email %>" required>
+    </div>
+
+    <div class="col-12">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject"  value="<%= contactData.subject %>" required>
+    </div>
+
+    <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required> <%= contactData.message %></textarea>
+    </div>
+
+    <div class="col-12 text-center mt-4">
+        <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+    </div>
+</form>
+
+        </div>
+    </div>
+
+    

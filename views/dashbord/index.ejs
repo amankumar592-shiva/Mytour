@@ -1,0 +1,207 @@
+<!-- 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <div class="header"><%- include('./header.ejs') %></div>
+
+
+<div class="container-fluid mt-4 p-0">
+    <div class="d-flex">
+      <div class="col-3">
+        <%- include('./sidebar.ejs') %>
+      </div>
+      <div class="col-9">
+       
+        
+        
+    <style>
+        :root {
+            --primary: #4e73df;
+            --primary-light: #7a9ef8;
+            --secondary: #f8f9fc;
+            --accent: #36b9cc;
+            --text: #5a5c69;
+            --text-light: #858796;
+            --white: #ffffff;
+            --gray: #dddfeb;
+            --success: #1cc88a;
+            --info: #36b9cc;
+            --warning: #f6c23e;
+            --danger: #e74a3b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            
+        }
+        
+        /* Dashboard Header */
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 4px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .dashboard-header h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .dashboard-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* Square Menu Boxes */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .menu-square {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .menu-square::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .menu-square:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-square:hover::before {
+            height: 10px;
+            background: var(--primary-light);
+        }
+        
+        .menu-square i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .menu-square:hover i {
+            transform: scale(1.2);
+            color: var(--primary-light);
+        }
+        
+        .menu-square h2 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-square:hover h2 {
+            color: var(--primary);
+        }
+        
+        .menu-square p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>User Dashboard</h1>
+            <p>Welcome back! Here's what's happening today.</p>
+        </div>
+        
+        <!-- Square Menu Boxes -->
+        <div class="menu-grid">
+            <a href="/addpackage" class="menu-square">
+                <i class="fas fa-plus-circle"></i>
+                <h2>Add Package</h2>
+                <p>Create new tour packages and services</p>
+            </a>
+            
+            <a href="/viewproduct" class="menu-square">
+                <i class="fas fa-box-open"></i>
+                <h2>View Products</h2>
+                <p>Manage all your tour packages</p>
+            </a>
+            
+            <a href="/viewcontact" class="menu-square">
+                <i class="fas fa-envelope"></i>
+                <h2>View Contacts</h2>
+                <p>Check customer inquiries</p>
+            </a>
+            
+            <a href="/viewregistration" class="menu-square">
+                <i class="fas fa-user-plus"></i>
+                <h2>View Registrations</h2>
+                <p>Manage user registrations</p>
+            </a>
+
+            <a href="/viewsubscriber" class="menu-square">
+                <i class="fas fa-user-plus"></i>
+                <h2>View subscribers</h2>
+                <p>Manage user subscribers</p>
+            </a>
+
+             <a href="/viewdeals" class="menu-square">
+                <i class="fas fa-eye"></i> 
+                <h2>View deals</h2>
+                <p>Manage user deals</p>
+            </a>
+        </div>
+        
+        
+       
+
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+ 

@@ -1,0 +1,144 @@
+
+  <style>
+    /* Main container styling */
+    .parent-container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+
+    /* Child container (login card) */
+    .login-card {
+      width: 100%;
+      max-width: 500px;
+      padding: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(230, 69, 168, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    
+    .login-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(230, 69, 168, 0.2);
+    }
+
+    
+    .login-title {
+      color: #e645a8;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+    
+    
+    .form-control {
+      height: 50px;
+      margin-bottom: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      padding: 0 20px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    
+    .form-control:focus {
+      border-color: #e645a8;
+      box-shadow: 0 0 0 0.25rem rgba(230, 69, 168, 0.25);
+    }
+
+
+    .btn-login {
+      background: #e645a8;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    
+    .btn-login:hover {
+      background: #d42d97;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(212, 45, 151, 0.4);
+    }
+
+    
+    .form-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+  
+    .form-footer a {
+      color: #e645a8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    
+    .form-footer a:hover {
+      color: #d42d97;
+      text-decoration: underline;
+    }
+
+    
+    .forgot-pass {
+      color: #e645a8;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    
+    .forgot-pass:hover {
+      color: #d42d97;
+    }
+  </style>
+
+
+  <div class="header"><%- include('common/header') %></div>
+<!-- Parent container for perfect centering -->
+<div class="parent-container">
+  <!-- Child container (login card) -->
+  <div class="login-card">
+    <h3 class="login-title">LOGIN</h3>
+    <form method="post">
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+      </div>
+      <div class="d-flex justify-content-between mb-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="remember">
+          <label class="form-check-label" for="remember">Remember me</label>
+        </div>
+
+        <a href="/forgotpassword" class="forgot-pass">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn-login">Login</button>
+      <div class="form-footer">
+        Don't have an account? <a href="#">Create one</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<%- include('common/footer') %>

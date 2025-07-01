@@ -1,0 +1,137 @@
+
+<style>
+  body {
+      font-weight: bold;
+      background-color: #f8f9fa;
+      /* padding: 20px; */
+  }
+  
+  .form-container {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      border: 1px solid cyan;
+  }
+  
+  .form-container {
+      border: 1px solid cyan;
+      /* box-shadow: 0 0 0 3px cyan, 0 0 10px cyan inset; */
+  }
+  
+  h1 {
+      text-align: center;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #0d6efd;
+  }
+  
+  label {
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  
+  .btn-register {
+      width: 100%;
+      padding: 10px;
+      font-weight: bold;
+      margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+      .form-container {
+          padding: 20px;
+          margin: 10px;
+      }
+      
+      h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+  }
+</style>
+   
+<div class="header"><%- include('../common/header.ejs') %></div>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+          <div class="form-container">
+              <form method="post" id="registrationform">
+                  <h1>REGISTRATION FORM</h1>
+                  
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="firstName" class="form-label">First Name</label>
+                          <input type="text" class="form-control" value="<%= regdata.firstname %>" name="firstname" required >
+                      </div>
+                      
+                      <div class="col-md-6 mb-3">
+                          <label for="lastName" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" name="lastname" value="<%= regdata.lastname %>" required>
+                      </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                      <label for="username" class="form-label">Username</label>
+                      <input type="text" class="form-control" name="username"  value="<%= regdata.username %>">
+                  </div>
+                  
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" name="email" aria-describedby="emailHelp" value="<%= regdata.email %>" required>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  
+                  <div class="mb-3">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="number" class="form-control" name="phone" value="<%= regdata.phone %>">
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" value="<%= regdata.password %>" required>
+                      </div>
+                      
+                      <div class="col-md-6 mb-3">
+                          <label for="confirmPassword" class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" name="confirmPassword"  value="<%= regdata.dob %>">
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="dob" class="form-label">Date of Birth</label>
+                          <input type="date" class="form-control" name="dob" value="<%= regdata.gender %>">
+                      </div>
+                      
+                      <div class="col-md-6 mb-3">
+                          <label for="gender" class="form-label">Gender</label>
+                          <select class="form-select" name="gender">
+                              <option selected>Select</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                              <option>Other</option>
+                          </select>
+                      </div>
+                  </div>
+                  
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="terms" required>
+                      <label class="form-check-label" for="terms">I agree to terms and conditions</label>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary btn-register rounded-pill">Register</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+    
+    <%- include('../common/footer.ejs') %>

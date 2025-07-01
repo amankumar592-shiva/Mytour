@@ -1,0 +1,67 @@
+
+     <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+<div class="col-12">
+  <%- include('./header.ejs') %>
+</div>
+
+<!-- Page Layout -->
+<div class="container-fluid mt-4 p-0">
+  <div class="d-flex">
+    <!-- Sidebar-->
+    <div class="col-3 text-dark p-3">
+      <%- include('./sidebar.ejs') %>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-9 p-3">
+      <div class="container-fluid mt-3 bg-light">
+        <h2>View Contacts</h2>
+
+        <% if (contactData.length > 0) { %>
+          <table class="table-bordered table" id="table">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>subject</th>
+                <th>message</th>
+                <th>Edit</th>      
+                <th>Delete</th>    
+              </tr>
+            </thead>
+            <tbody>
+              <% for (var i = 0; i < contactData.length; i++) { %>
+                <tr>
+                  <td><%= contactData[i].name %></td>
+                  <td><%= contactData[i].email %></td>
+                  <td><%= contactData[i].subject %></td>
+                  <td><%= contactData[i].message %></td>                 
+                  <td><a href="/edit_3/<%= contactData[i]._id %>">Edit</a></td>
+                  <td><a href="/delete_3/<%= contactData[i]._id %>">Delete</a></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <p>No record found</p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Initialize DataTable -->
+<script>
+  $(document).ready(function () {
+    $('#table').DataTable();
+  });
+</script>

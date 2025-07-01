@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<style>
+  :root {
+      --primary-color: #00a651;
+      --secondary-color: #ff7d00;
+      --dark-color: #333;
+      --light-color: #f8f9fa;
+  }
+  
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--dark-color);
+  }
+  
+  
+  .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4');
+      background-size: cover;
+      background-position: center;
+      color:white;
+      padding: 100px 0;
+      margin-bottom: 30px;
+  }
+
+  .form-label{ color: black; }
+  
+  .search-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+      position: relative;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      color: var(--primary-color);
+  }
+  
+  .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100px;
+      height: 3px;
+      background: var(--secondary-color);
+  }
+  
+  .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+  }
+  
+  .card:hover {
+      transform: translateY(-10px);
+  }
+  
+  .card-img-top {
+      height: 200px;
+      object-fit: cover;
+  }
+  
+  .badge-tour {
+      background-color: var(--secondary-color);
+      color: white;
+  }
+  
+  .price {
+      color: var(--primary-color);
+      font-weight: bold;
+  }
+  
+ 
+  .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin-right: 15px;
+  }
+  
+  @media (max-width: 768px) {
+      .hero-section {
+          padding: 60px 0;
+      }
+      
+      .search-box {
+          padding: 20px;
+      }
+  }
+
+
+  
+  /*  popular destination carousel */
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+         
+       
+
+        @media (max-width: 767.98px) {
+            .desktop-carousel {
+                display: none;
+            }
+        }
+        @media (min-width: 768px) {
+            .mobile-carousel {
+                display: none;
+            }
+        }
+
+   
+    /* Mobile-specific button positioning */
+    @media (max-width: 767.98px) {
+        
+        #mobileCarousel .carousel-control-prev,
+        #mobileCarousel .carousel-control-next {
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Left button positioning */
+        #mobileCarousel .carousel-control-prev {
+            left: 50px;
+        }
+        
+        /* Right button positioning */
+        #mobileCarousel .carousel-control-next {
+            right: 50px;
+        }
+        
+        /* Button icon styling */
+        #mobileCarousel .carousel-control-prev-icon,
+        #mobileCarousel .carousel-control-next-icon {
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0,0,0,0.7); /* More visible background */
+            border: 2px solid white; /* White border for better visibility */
+        }
+        
+        /* Optional: Make buttons larger on touch devices */
+        @media (hover: none) {
+            #mobileCarousel .carousel-control-prev,
+            #mobileCarousel .carousel-control-next {
+                width: 50px;
+                height: 50px;
+               
+            }
+        }
+    }
+/* popular destination carousal end */
+
+
+/* new */
+
+ 
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    height: 100%;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgb(8, 7, 7);
+    border-radius: 50%;
+    padding: 15px;
+    border:2px solid orange;
+    
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }  
+
+  
+    
+  
+  /* Desktop carousel (3 cards per slide) */
+  @media (min-width: 768px) {
+    .mobile-carousel {
+      display: none;
+    }
+  }
+  
+  /* Mobile carousel (2 cards per slide) */
+  @media (max-width: 767.98px) {
+    .desktop-carousel {
+      display: none;
+    }
+    
+    /* Mobile carousel container */
+    #mobileReligiousCarousel {
+      padding: 0 0px; /* Add padding for button space */
+    }
+    
+    /* Navigation buttons */
+    #mobileReligiousCarousel .carousel-control-prev,
+    #mobileReligiousCarousel .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      top: 30%;
+      background: rgba(0,0,0,0.3);
+      border-radius: 50%;
+      border: 2px solid white;
+      opacity: 1;
+    }
+    
+    #mobileReligiousCarousel .carousel-control-prev {
+      left: 70px;
+    }
+    
+    #mobileReligiousCarousel .carousel-control-next {
+      right: 70px;
+    }
+    
+    /* Button icons */
+    #mobileReligiousCarousel .carousel-control-prev-icon,
+    #mobileReligiousCarousel .carousel-control-next-icon {
+      width: 20px;
+      height: 20px;
+      background-size: 100% 100%;
+    }
+    
+    /* Card sizing for mobile */
+    .mobile-carousel .card {
+      margin: 0 5px;
+      
+    }
+    .mobile-carousel .card-img-top {
+  width:100%;  /* Takes full width of card */
+  /* Fixed height */
+  object-fit: cover; /* Ensures proper aspect ratio */
+}
+  }
+</style>
+
+  
+  </head>
+  <body>
+  <div class="header"> 
+    <%- include('common/header') %>
+  </div>
+  <!-- Hero Section with Search Box start -->
+  <section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Discover Your Perfect Adventure</h1>
+                <p class="lead mb-5">Explore thousands of tours, activities, and getaways around the world</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="search-box">
+                    <form id="tourSearchForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="destination" class="form-label">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="Where do you want to go?">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="duration" class="form-label">Duration</label>
+                                <select class="form-select" id="duration">
+                                    <option selected>Any duration</option>
+                                    <option>1-3 days</option>
+                                    <option>4-7 days</option>
+                                    <option>8-14 days</option>
+                                    <option>15+ days</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100 py-3">Search Tours</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section with Search Box end -->
+
+<!-- 11111 -->
+ <section class="container-fluid py-5">
+  <h2 class="section-title mx-5">Religious Products</h2>
+
+  <!-- Desktop Carousel (3 cards per slide) -->
+  <div class="container-fluid mt-4">
+    <% if (religious && religious.length > 0) { %>
+      <div id="desktopReligiousCarousel" class="carousel slide desktop-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% for (let i = 0; i < religious.length; i += 3) { %>
+            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+              <div class="row">
+                <% for (let j = i; j < i + 3 && j < religious.length; j++) { %>
+                  <div class="col-md-4">
+                    <div class="card mb-4">
+                      <img src="/<%= religious[j].uploadimage[0] %>" class="card-img-top" alt="<%= religious[j].productname %>">
+                      <div class="card-body">
+                        <h5 class="card-title"><%= religious[j].productname %></h5>
+                        <p class="card-text"><strong>Package:</strong> <%= religious[j].packagedetails %></p>
+                        <p class="card-text"><strong>Category:</strong> <%= religious[j].category %></p>
+                        <p class="card-text"><strong>Price:</strong> ₹<%= religious[j].price %></p>
+                        <p class="card-text"><strong>Duration:</strong> <%= religious[j].duration %></p>
+                        <p class="card-text"><strong>Location:</strong> <%= religious[j].location %></p>
+                        <a href="#" class="btn btn-dark">Buy Now</a>
+                        <a href="/viewproduct/<%= religious[j]._id %>" class="btn btn-dark">View Product</a>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#desktopReligiousCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#desktopReligiousCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Mobile Carousel (2 cards per slide) -->
+  
+      <!-- Mobile Carousel (2 cards per slide) - FULL WIDTH -->
+      <div class="container-fluid mobile-carousel-container px-0">
+        <div id="mobileReligiousCarousel" class="carousel slide mobile-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <% for (let i = 0; i < religious.length; i += 2) { %>
+              <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                <div class="row mx-0">
+                  <% for (let j = i; j < i + 2 && j < religious.length; j++) { %>
+                    <div class="col-6 px-1">
+                      <div class="card h-100">
+                        <img src="/<%= religious[j].uploadimage[0] %>" class="card-img-top" alt="<%= religious[j].productname %>">
+                        <div class="card-body">
+                          <h5 class="card-title" style="font-size: 1rem;"><%= religious[j].productname %></h5>
+                          <p class="card-text small mb-1"><strong>Price:</strong> ₹<%= religious[j].price %></p>
+                          <p class="card-text small mb-2"><strong>Location:</strong> <%= religious[j].location %></p>
+                          <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-dark btn-sm py-1">Buy Now</a>
+                            <a href="/viewproduct/<%= religious[j]._id %>" class="btn btn-dark btn-sm py-1">View</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+            <% } %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#mobileReligiousCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#mobileReligiousCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    <% } else { %>
+      <p class="text-center">No record found</p>
+    <% } %>
+  </div>
+
+</section>
+
+ <!-- 11111 -->
+ <!-- carosul backend data end -->
+<!-- Featured Tours Section -->
+<section class="container mb-5">
+    <h2 class="section-title">Featured Tours</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <a href="#"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Tour Image"></a>
+                <div class="card-body">
+                    <span class="badge badge-tour mb-2">Bestseller</span>
+                    <h5 class="card-title">European Explorer</h5>
+                    <p class="card-text">Discover the best of Europe with this 14-day adventure through 5 countries.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-1">4.5</span>
+                        </div>
+                        <div class="price">$1,299</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+              <a href="#">  <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="card-img-top" alt="Tour Image"></a>
+                <div class="card-body">
+                    <span class="badge badge-tour mb-2">Limited Time</span>
+                    <h5 class="card-title">Asian Adventure</h5>
+                    <p class="card-text">Experience the vibrant cultures and stunning landscapes of Southeast Asia.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <span class="ms-1">4.0</span>
+                        </div>
+                        <div class="price">$999</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+               <a href="#"> <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Tour Image"></a>
+                <div class="card-body">
+                    <span class="badge badge-tour mb-2">New</span>
+                    <h5 class="card-title">African Safari</h5>
+                    <p class="card-text">Witness the majestic wildlife of Africa on this unforgettable 10-day safari.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <span class="ms-1">5.0</span>
+                        </div>
+                        <div class="price">$2,499</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-primary">View All Tours</a>
+    </div>
+</section>
+<!-- Featured Tours Section  end-->
+<!-- backend data/ carousel -->
+ 
+ <!-- backend -->
+<!-- Destinations Carousel Section start -->
+<!-- <section class="container mb-5">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div id="destinationsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                           <a href="#"> <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" class="card-img-top rounded" alt="Paris"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Paris, France</h5>
+                                <p class="card-text">From $499</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                           <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Bali"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Rome, Italy</h5>
+                                <p class="card-text">From $599</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                            <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Bali"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Bali, Indonesia</h5>
+                                <p class="card-text">From $699</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                           <a href="#"> <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" class="card-img-top rounded" alt="New York"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">New York, USA</h5>
+                                <p class="card-text">From $799</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                            <a href="#"><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Tokyo"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Tokyo, Japan</h5>
+                                <p class="card-text">From $899</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                            <a href="#"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Sydney"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sydney, Australia</h5>
+                                <p class="card-text">From $1,099</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                            <a href="#"><img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Cape Town"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cape Town, South Africa</h5>
+                                <p class="card-text">From $1,199</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                           <a href="#"> <img src="https://images.unsplash.com/photo-1517153295259-74eb0b416cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top rounded" alt="Rio"></a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+                                <p class="card-text">From $899</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section> -->
+<!-- Destinations Carousel Section end -->
+<!-- 666 -->
+  <section class="container py-5">
+        <h2 class="section-title">Popular Destinations</h2>
+        
+        <!-- Desktop Carousel (2 slides with 4 cards each) -->
+        <div id="desktopCarousel" class="carousel slide desktop-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Paris -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" class="card-img-top" alt="Paris"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Paris, France</h5>
+                                    <p class="card-text">From $499</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Rome -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Rome"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Rome, Italy</h5>
+                                    <p class="card-text">From $599</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bali -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Bali"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Bali, Indonesia</h5>
+                                    <p class="card-text">From $699</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- New York -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" class="card-img-top" alt="New York"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">New York, USA</h5>
+                                    <p class="card-text">From $799</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Tokyo -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Tokyo"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Tokyo, Japan</h5>
+                                    <p class="card-text">From $899</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sydney -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Sydney"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Sydney, Australia</h5>
+                                    <p class="card-text">From $1,099</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cape Town -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Cape Town"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Cape Town, South Africa</h5>
+                                    <p class="card-text">From $1,199</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Rio -->
+                        <div class="col-md-3 col-6">
+                            <div class="card">
+                                <a href="#"><img src="https://images.unsplash.com/photo-1517153295259-74eb0b416cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Rio"></a>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+                                    <p class="card-text">From $899</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#desktopCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#desktopCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+<!-- Mobile Carousel (8 slides with 1 card each) -->
+        <div id="mobileCarousel" class="carousel slide mobile-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Paris -->
+                <div class="carousel-item active">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" class="card-img-top" alt="Paris"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Paris, France</h5>
+                            <p class="card-text">From $499</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rome -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Rome"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rome, Italy</h5>
+                            <p class="card-text">From $599</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bali -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Bali"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bali, Indonesia</h5>
+                            <p class="card-text">From $699</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New York -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80" class="card-img-top" alt="New York"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">New York, USA</h5>
+                            <p class="card-text">From $799</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tokyo -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Tokyo"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tokyo, Japan</h5>
+                            <p class="card-text">From $899</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sydney -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Sydney"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sydney, Australia</h5>
+                            <p class="card-text">From $1,099</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cape Town -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Cape Town"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cape Town, South Africa</h5>
+                            <p class="card-text">From $1,199</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rio -->
+                <div class="carousel-item">
+                    <div class="card mx-auto" style="width: 90%;">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1517153295259-74eb0b416cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Rio"></a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+                            <p class="card-text">From $899</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mobileCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mobileCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+ <!-- 666 -->
+<!-- Why Choose Us Section start -->
+<section class="container mb-5">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="text-center p-4 border rounded h-100">
+                <div class="mb-3">
+                   <a href="#"> <i class="fas fa-award fa-3x text-primary"></i></a>
+                </div>
+                <h4>Trusted Experts</h4>
+                <p>Our team has over 20 years of experience in creating unforgettable travel experiences.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="text-center p-4 border rounded h-100">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-hand-holding-usd fa-3x text-primary"></i></a>
+                </div>
+                <h4>Best Price Guarantee</h4>
+                <p>We'll match any lower price you find for the same tour with another operator.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="text-center p-4 border rounded h-100">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-headset fa-3x text-primary"></i></a>
+                </div>
+                <h4>24/7 Support</h4>
+                <p>Our customer service team is available around the clock to assist you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose Us Section end-->
+
+<!-- Testimonials Carousel Section start -->
+<section class="bg-light py-5 mb-5">
+    <div class="container">
+        <h2 class=" text-center">What Our Travelers Say</h2>
+        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="text-center p-4">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle mb-3" width="100" alt="Testimonial">
+                                <p class="lead mb-4">"The European Explorer tour was absolutely amazing! Every detail was perfectly planned, and our guide was knowledgeable and friendly. Can't wait to book my next adventure with TourRadar!"</p>
+                                <h5>Sarah Johnson</h5>
+                                <p class="text-muted">New York, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="text-center p-4">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle mb-3" width="100" alt="Testimonial">
+                                <p class="lead mb-4">"I've traveled with many companies, but TourRadar stands out for their exceptional service and attention to detail. The Asian Adventure tour exceeded all my expectations!"</p>
+                                <h5>Michael Chen</h5>
+                                <p class="text-muted">Toronto, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="text-center p-4">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3" width="100" alt="Testimonial">
+                                <p class="lead mb-4">"The African Safari was a once-in-a-lifetime experience. Seeing the Big Five in their natural habitat was breathtaking. Thank you TourRadar for making this dream come true!"</p>
+                                <h5>Emma Wilson</h5>
+                                <p class="text-muted">London, UK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Carousel Section end -->
+
+<!-- Tour Types Section start-->
+<section class="container mb-5">
+    <h2 class="section-title">Tour Types</h2>
+    <div class="row">
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                   <a href="#">  <i class="fas fa-hiking fa-3x text-primary"></i></a>
+                </div>
+                <h5>Adventure</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-umbrella-beach fa-3x text-primary"></i></a>
+                </div>
+                <h5>Beach</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                   <a href="#">  <i class="fas fa-landmark fa-3x text-primary"></i></a>
+                </div>
+                <h5>Cultural</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                   <a href="#">  <i class="fas fa-camera fa-3x text-primary"></i></a>
+                </div>
+                <h5>Photography</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                   <a href="#">  <i class="fas fa-utensils fa-3x text-primary"></i></a>
+                </div>
+                <h5>Food & Wine</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-leaf fa-3x text-primary"></i></a>
+                </div>
+                <h5>Eco Tours</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-bus fa-3x text-primary"></i></a>
+                </div>
+                <h5>Sightseeing</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 mb-4">
+            <div class="text-center">
+                <div class="mb-3">
+                    <a href="#"> <i class="fas fa-ship fa-3x text-primary"></i></a>
+                </div>
+                <h5>Cruises</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Tour Types Section end -->
+
+<!-- Deals Section start-->
+<section class="bg-primary text-white py-5 mb-5">
+    <div class="container">
+        <h2 class="section-title text-white">Last Minute Deals</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+        <a href="#"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Deal Image"></a>
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">30% OFF</span>
+                        <h5 class="card-title">Greek Islands Hopping</h5>
+                        <p class="card-text">7-day tour of Mykonos, Santorini, and more.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-decoration-line-through text-muted me-2">$1,499</span>
+                                <span class="price">$1,049</span>
+                            </div>
+                            <small class="text-muted">Departing: Next week</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+            <a href="#"> <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" class="card-img-top" alt="Deal Image"></a>
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">25% OFF</span>
+                        <h5 class="card-title">Vietnam Highlights</h5>
+                        <p class="card-text">10-day tour from Hanoi to Ho Chi Minh City.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-decoration-line-through text-muted me-2">$1,199</span>
+                                <span class="price">$899</span>
+                            </div>
+                            <small class="text-muted">Departing: In 2 weeks</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+        <a href="#"> <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Deal Image"></a>
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">20% OFF</span>
+                        <h5 class="card-title">Peru Adventure</h5>
+                        <p class="card-text">Machu Picchu and the Amazon rainforest.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-decoration-line-through text-muted me-2">$1,799</span>
+                                <span class="price">$1,439</span>
+                            </div>
+                            <small class="text-muted">Departing: Next month</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <a href="#" class="btn btn-light">View All Deals</a>
+        </div>
+    </div>
+</section>
+<!-- Deals Section end-->
+<!-- Blog Section start -->
+<section class="container mb-5">
+    <h2 class="section-title">Travel Inspiration</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+               <a href="#"> <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Blog Image"> </a>
+                <div class="card-body">
+                    <small class="text-muted">June 15, 2023</small>
+                    <h5 class="card-title mt-2">10 Must-Visit Destinations in 2023</h5>
+                    <p class="card-text">Discover the trending destinations that should be on your travel list this year.</p>
+                    <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+               <a href="#"> <img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Blog Image"> </a>
+                <div class="card-body">
+                    <small class="text-muted">May 28, 2023</small>
+                    <h5 class="card-title mt-2">Traveling on a Budget: Top Tips</h5>
+                    <p class="card-text">Learn how to explore the world without breaking the bank with these expert tips.</p>
+                    <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+               <a href="#"> <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" class="card-img-top" alt="Blog Image"> </a>
+                <div class="card-body">
+                    <small class="text-muted">April 10, 2023</small>
+                    <h5 class="card-title mt-2">Solo Travel: A Life-Changing Experience</h5>
+                    <p class="card-text">Why traveling alone might be the best decision you'll ever make.</p>
+                    <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Section end -->
+<!-- Newsletter Section start -->
+<section class="bg-light py-5 mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h2 >Stay Updated</h2>
+                <p class="mb-4">Subscribe to our newsletter for the latest deals, travel tips, and destination inspiration.</p>
+                <form class="d-flex" method="post" action="/subscriber">
+                    <input type="email" class="form-control me-2" id="email" name="email"  placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Newsletter Section end -->
+<!--main section end-->
+
+  <!--footer section-->
+<%- include('common/footer') %>
+<!--end-->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script>
+    // Search form functionality
+    document.getElementById('tourSearchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const destination = document.getElementById('destination').value;
+        const date = document.getElementById('date').value;
+        const duration = document.getElementById('duration').value;
+        
+        // Here you would typically send this data to a server
+        console.log('Searching for tours:', {destination, date, duration});
+        
+        // For demo purposes, show an alert
+        alert(`Searching for ${duration} tours in ${destination} around ${date}`);
+    });
+    
+    // Initialize carousels
+    //document.addEventListener('DOMContentLoaded', function() {
+       
+        // Enable carousel auto-cycling
+    //     const destinationsCarousel = new bootstrap.Carousel(document.getElementById('destinationsCarousel'), {
+    //         interval: 5000
+    //     });
+        
+    //     const testimonialsCarousel = new bootstrap.Carousel(document.getElementById('testimonialsCarousel'), {
+    //         interval: 7000
+    //     });
+    // });
+</script>
+
+
+</body>
+</html>
+
