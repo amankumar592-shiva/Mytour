@@ -6,3 +6,5 @@ image/
 # Ignore files
 controller/router.js
 db/database.js
+db/mongodb.js
+db/mysqlconnection.js
